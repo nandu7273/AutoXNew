@@ -1,0 +1,660 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLay_Exchange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_view_exchange_header"
+            app:layout_constraintBottom_toTopOf="@id/linearLayoutFinType"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Exchange Details"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="29dp"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/linearLayoutFinType"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_view_exchange_header"
+            app:layout_constraintStart_toStartOf="parent">
+
+
+            <CheckBox
+                android:id="@+id/chkCash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:text="Cash" />
+
+
+            <CheckBox
+                android:id="@+id/chkFinance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:layout_marginTop="10dp"
+                android:text="Finance" />
+
+            <CheckBox
+                android:id="@+id/chkExchange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="#FFFFFF"
+                android:textColorHighlight="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:text="Exchange" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayLImgEx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutFinType"
+            app:layout_constraintBottom_toTopOf="@id/linearLayLImgEx2"
+            android:weightSum="10"
+            android:minHeight="120dp"
+            android:maxHeight="120dp"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginStart="18dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:weightSum="2"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    >
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp"
+
+                        android:minHeight="120dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="#FFFFFF"
+                            android:orientation="vertical"
+                            android:weightSum="100"
+                            >
+
+                            <ImageView
+                                android:id="@+id/ImgViewExchange1"
+                                android:layout_width="match_parent"
+                                android:layout_weight="83"
+                                android:layout_height="0dp"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="17"
+                                android:padding="2dp"
+                                android:textAlignment="center"
+                                android:background="@color/black"
+                                android:textColor="@color/white"
+                                android:text="Exchange Image - 1"
+                                android:textSize="14sp"
+                                android:textAllCaps="true"
+
+                                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                        </LinearLayout>
+
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    >
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:strokeWidth="2dp"
+                        app:strokeColor="@color/black"
+                        android:minHeight="120dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="#FFFFFF"
+                            android:orientation="vertical"
+                            android:weightSum="100">
+
+                            <ImageView
+                                android:id="@+id/ImgViewExchange2"
+                                android:layout_width="match_parent"
+                                android:layout_weight="83"
+                                android:layout_height="0dp"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="17"
+                                android:padding="2dp"
+                                android:textAlignment="center"
+                                android:background="@color/black"
+                                android:textColor="@color/white"
+                                android:text="Exchange Image - 2"
+                                android:textSize="14sp"
+                                android:textAllCaps="true"
+
+                                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                        </LinearLayout>
+
+
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayLImgEx2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayLImgEx"
+            app:layout_constraintBottom_toTopOf="@id/linearLayLImgEx3"
+            android:weightSum="10"
+            android:minHeight="120dp"
+            android:maxHeight="120dp"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:weightSum="2"
+
+                >
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    >
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp"
+
+                        android:minHeight="120dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="#FFFFFF"
+                            android:orientation="vertical"
+                            android:weightSum="100"
+                            >
+
+                            <ImageView
+                                android:id="@+id/ImgViewExchange3"
+                                android:layout_width="match_parent"
+                                android:layout_weight="83"
+                                android:layout_height="0dp"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="17"
+                                android:padding="2dp"
+                                android:textAlignment="center"
+                                android:background="@color/black"
+                                android:textColor="@color/white"
+                                android:text="Exchange Image - 3"
+                                android:textSize="14sp"
+                                android:textAllCaps="true"
+
+                                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                        </LinearLayout>
+
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    >
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:strokeWidth="2dp"
+                        app:strokeColor="@color/black"
+                        android:minHeight="120dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="#FFFFFF"
+                            android:orientation="vertical"
+                            android:weightSum="100">
+
+                            <ImageView
+                                android:id="@+id/ImgViewExchange4"
+                                android:layout_width="match_parent"
+                                android:layout_weight="83"
+                                android:layout_height="0dp"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="17"
+                                android:padding="2dp"
+                                android:textAlignment="center"
+                                android:background="@color/black"
+                                android:textColor="@color/white"
+                                android:text="Exchange Image - 4"
+                                android:textSize="14sp"
+                                android:textAllCaps="true"
+
+                                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                        </LinearLayout>
+
+
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/linearLayLImgEx3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayLImgEx2"
+            app:layout_constraintBottom_toTopOf="@id/linearLayExchange"
+            android:weightSum="10"
+            android:minHeight="120dp"
+            android:maxHeight="120dp"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10"
+                android:weightSum="2"
+
+                >
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    >
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:strokeColor="@color/black"
+                        app:strokeWidth="2dp"
+
+                        android:minHeight="120dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="#FFFFFF"
+                            android:orientation="vertical"
+                            android:weightSum="100"
+                            >
+
+                            <ImageView
+                                android:id="@+id/ImgViewExchange5"
+                                android:layout_width="match_parent"
+                                android:layout_weight="83"
+                                android:layout_height="0dp"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="17"
+                                android:padding="2dp"
+                                android:textAlignment="center"
+                                android:background="@color/black"
+                                android:textColor="@color/white"
+                                android:text="Exchange Image - 5"
+                                android:textSize="14sp"
+                                android:textAllCaps="true"
+
+                                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                        </LinearLayout>
+
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:layout_margin="5dp"
+                    >
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:strokeWidth="2dp"
+                        app:strokeColor="@color/black"
+                        android:minHeight="120dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="bottom"
+                            android:background="#FFFFFF"
+                            android:orientation="vertical"
+                            android:weightSum="100">
+
+                            <ImageView
+                                android:id="@+id/ImgViewExchange6"
+                                android:layout_width="match_parent"
+                                android:layout_weight="83"
+                                android:layout_height="0dp"/>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="17"
+                                android:padding="2dp"
+                                android:textAlignment="center"
+                                android:background="@color/black"
+                                android:textColor="@color/white"
+                                android:text="Exchange Image - 6"
+                                android:textSize="14sp"
+                                android:textAllCaps="true"
+
+                                android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                        </LinearLayout>
+
+
+
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:id="@+id/linearLayExchange"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@id/BtnSave"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayLImgEx3">
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:textColorHint="#FFFFFF"
+                app:boxStrokeColor="#FFFFFF"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/txtExchVeh"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:hint="Exchange Vehicle"
+                    android:inputType="textMultiLine" >
+
+
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:textColorHint="#FFFFFF"
+                app:boxStrokeColor="#FFFFFF"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/txtExchVehCustRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:hint="Customer Rate">
+
+
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:textColorHint="#FFFFFF"
+                app:boxStrokeColor="#FFFFFF"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+
+                <AutoCompleteTextView
+
+                    android:id="@+id/txtExchVehBroName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:layout_marginStart="2dp"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:hint="Broker Name">
+
+
+                </AutoCompleteTextView>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:textColorHint="#FFFFFF"
+                app:boxStrokeColor="#FFFFFF"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/txtExchVehBroRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorLink="#FFFFFF"
+                    android:hint="Broker Rate">
+
+                </EditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/BtnSave"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/linearLayExchange"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="40dp"
+            android:text="Save Enquiry"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Line_lay_tab3_td_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/con_layTest_Main"
+            android:layout_width="match_parent"
+            android:layout_weight="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/Line_lay_tab3_td_img"
+            android:layout_height="wrap_content">
+
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_view_Test_drive_header"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="Test Drive Details"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="29dp"
+                android:layout_marginBottom="20dp"
+                android:textColor="@color/white"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/Line_lay_tab3_radio_group"
+                app:layout_constraintTop_toBottomOf="@id/text_view_Test_drive_header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:gravity="center"
+                android:foregroundGravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+
+                >
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:textColor="#FFFFFF"
+                        android:textColorHighlight="#FFFFFF"
+                        android:textColorLink="#FFFFFF"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="Test Drive"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:background="@drawable/ic_motorcycle_black_24dp"
+                        />
+
+
+                    <RadioButton
+                        android:id="@+id/rdoYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:layout_marginStart="6dp"
+                        android:text="Yes" />
+
+                    <RadioButton
+                        android:id="@+id/rdoNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:textColor="@color/white"
+                        android:text="No" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/Line_lay_tab3_td_details"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/Line_lay_tab3_radio_group"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:orientation="vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                >
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:id="@+id/TestDrDateLay"
+                    android:textColorHint="#FFFFFF"
+                    app:boxStrokeColor="#FFFFFF">
+
+                    <EditText
+                        android:id="@+id/txtTestDriveDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:focusable="false"
+                        android:fontFamily="sans-serif"
+                        android:hint="Test Drive Date"
+                        android:inputType="date"
+                        android:textColor="#FFFFFF"
+                        android:textColorHighlight="#FFFFFF"
+                        android:textColorLink="#FFFFFF"
+                        android:visibility="visible"
+                        tools:text="@tools:sample/date/mmddyy">
+
+                    </EditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="#FFFFFF"
+                    app:boxStrokeColor="#FFFFFF"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/txtFeedback"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:ems="10"
+                        android:hint="Feedback"
+                        android:inputType="textMultiLine"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtTestDriveDate"
+                        app:layout_constraintVertical_chainStyle="spread_inside"
+                        android:textColor="#FFFFFF"
+                        android:textColorHighlight="#FFFFFF"
+                        android:textColorLink="#FFFFFF">
+
+                    </EditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spnTestSatis"
+                    android:layout_width="match_parent"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#FFFFFF"
+                    android:dropDownSelector="@color/white"
+                    android:textColorLink="#FFFFFF"
+                    android:layout_height="40dp"
+                    android:background="@drawable/linear_layout"
+                    android:layout_marginTop="10dp">
+
+                </androidx.appcompat.widget.AppCompatSpinner>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:orientation="vertical"
+            android:id="@+id/Line_lay_tab3_td_img"
+            app:layout_constraintTop_toBottomOf="@id/con_layTest_Main"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_weight="0.5">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="2"
+                    android:padding="18dp"
+
+                    >
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:layout_margin="5dp"
+                        >
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="120dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:strokeColor="@color/black"
+                            app:strokeWidth="2dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
+                                android:orientation="vertical"
+                                android:weightSum="100">
+
+                                <ImageView
+                                    android:id="@+id/ImgViewTestDrive1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="83"
+                                    />
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="17"
+                                    android:padding="2dp"
+                                    android:textAlignment="center"
+                                    android:background="@color/black"
+                                    android:textColor="@color/white"
+                                    android:text="Test Drive Image - 1"
+                                    android:textSize="14sp"
+                                    android:textAllCaps="true"
+
+                                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                            </LinearLayout>
+
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:layout_margin="5dp"
+                        android:background="@color/transparent"
+                        >
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:strokeWidth="2dp"
+                            app:strokeColor="@color/black"
+                            android:background="@color/transparent"
+                            android:minHeight="120dp"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="bottom"
+                                android:background="@color/transparent"
+                                android:orientation="vertical"
+                                android:weightSum="100">
+
+                                <ImageView
+                                    android:id="@+id/ImgViewTestDrive2"
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="83"
+                                    android:layout_height="0dp"/>
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="17"
+                                    android:padding="2dp"
+                                    android:textAlignment="center"
+                                    android:background="@color/black"
+                                    android:textColor="@color/white"
+                                    android:text="Test Drive Image - 2"
+                                    android:textSize="14sp"
+                                    android:textAllCaps="true"
+
+                                    android:textAppearance="?attr/textAppearanceHeadline6" />
+
+                            </LinearLayout>
+
+
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</LinearLayout>
+

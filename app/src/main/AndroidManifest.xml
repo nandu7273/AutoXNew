@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.nandu.autox">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.ADJUST_RUNTIME_PERMISSIONS_POLICY" />
+    <uses-permission android:name="android.permission.WHITELIST_RESTRICTED_PERMISSIONS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.MANAGE_ROLE_HOLDERS" />
+    <uses-permission android:name="android.permission.OBSERVE_ROLE_HOLDERS" />
+    <uses-permission android:name="android.permission.ACCESS_SHARED_LIBRARIES" />
+    <uses-permission android:name="com.nandu.autox.permission.MANAGE_ROLES_FROM_CONTROLLER" />
+    <uses-permission android:name="android.permission.REQUEST_INCIDENT_REPORT_APPROVAL" />
+    <uses-permission android:name="android.permission.APPROVE_INCIDENT_REPORTS" />
+    <uses-permission android:name="android.permission.READ_DEVICE_CONFIG" />
+    <uses-permission android:name="android.permission.OPEN_ACCESSIBILITY_DETAILS_SETTINGS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name=".PublicShared"
+        android:allowBackup="true"
+        android:icon="@mipmap/logogrand_lay"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/logogrand_lay"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:authorities="${applicationId}.lifecycle-process"
+            android:exported="false"
+            android:multiprocess="true"
+            tools:replace="android:authorities" />
+        <provider
+            android:name=".GenericFileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name=".dashboard"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.ALL_APPS" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".help" />
+        <activity android:name=".about_us" />
+        <activity android:name=".Enquiry_Search" />
+        <activity
+            android:name=".Home_activity"
+            android:label="@string/title_activity_home_activity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.ALL_APPS" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Enquiry_add"
+            android:label="@string/title_activity_enquiry_add"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SplashscreenActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullscreenTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- <activity -->
+        <!-- android:name=".MainActivity" -->
+        <!-- android:windowSoftInputMode="stateVisible|adjustPan"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.MAIN" /> -->
+        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+        <!-- </intent-filter> -->
+        <!-- </activity> -->
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateVisible|adjustPan" />
+    </application>
+
+</manifest>

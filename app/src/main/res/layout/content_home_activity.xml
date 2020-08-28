@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Home_activity"
+    android:background="@mipmap/back"
+    tools:showIn="@layout/app_bar_home_activity">
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:minHeight="80dp"
+      android:id="@+id/linearLayPerInfo"
+      android:weightSum="100"
+      android:layout_marginTop="10dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:orientation="horizontal"
+      android:baselineAligned="false">
+
+
+
+    <!--<ImageView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/ImgViewPropic"-->
+    <!--android:layout_weight="35"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--android:layout_gravity="start"-->
+    <!--android:layout_marginStart="10dp"-->
+    <!--android:layout_marginEnd="10dp"-->
+    <!--android:paddingBottom="10dp"-->
+    <!--android:background="@drawable/circle"-->
+    <!--/>-->
+    <!---->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="35"
+        android:orientation="vertical"
+        >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:weightSum="1"
+          android:layout_weight="35"
+          android:orientation="vertical"
+          tools:ignore="NestedWeights">
+
+        <com.nandu.autox.CircularImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/ImgViewPropic"
+            android:foregroundGravity="top"
+            android:paddingTop="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:paddingBottom="10dp"
+            />
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="65"
+        android:minHeight="100dp"
+        android:weightSum="90"
+        android:orientation="horizontal"
+        android:layout_marginEnd="10dp"
+        android:baselineAligned="false">
+
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="30"
+          android:minHeight="100dp"
+          android:weightSum="2"
+          android:orientation="vertical"
+          tools:ignore="NestedWeights"
+          android:paddingTop="15dp"
+          android:paddingBottom="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/TxtViewHpEnq"
+            android:text="@string/Enq_Count"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:layout_gravity="bottom|center"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/TxtViewHpEnqCount"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            />
+
+      </LinearLayout>
+
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="30"
+          android:minHeight="100dp"
+          android:weightSum="2"
+          android:orientation="vertical"
+          tools:ignore="NestedWeights"
+          android:paddingBottom="10dp"
+          android:paddingTop="15dp"
+          >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/TxtViewHpBkng"
+            android:text="@string/Bkng_Count"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:layout_gravity="bottom|center"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            />
+
+
+        <TextView
+            android:id="@+id/TxtViewHpBkngCount"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="bottom"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textAlignment="center" />
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_height="wrap_content"
+          android:layout_weight="30"
+          android:minHeight="100dp"
+          android:weightSum="2"
+          android:orientation="vertical"
+          tools:ignore="NestedWeights"
+          android:paddingTop="15dp"
+          android:paddingBottom="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/TxtViewHpEnq_calle"
+            android:text=""
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/TxtViewHpEnq_called"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            android:textColor="@color/white"
+            />
+
+
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+
+  </LinearLayout>
+
+
+  <!--<LinearLayout-->
+  <!--android:layout_width="match_parent"-->
+  <!--android:layout_height="wrap_content"-->
+  <!--android:id="@+id/linearLayHomebtn"-->
+  <!--app:layout_constraintTop_toBottomOf="@id/linearLayPerInfo"-->
+  <!--app:layout_constraintStart_toStartOf="parent"-->
+  <!--app:layout_constraintEnd_toEndOf="parent"-->
+  <!--android:orientation="horizontal"-->
+  <!--android:layout_marginBottom="20dp">-->
+
+  <!--<include-->
+  <!--layout="@layout/home_tab"/>-->
+
+  <!--</LinearLayout>-->
+
+
+
+
+  <LinearLayout
+      android:id="@+id/linearLayL1"
+      android:layout_width="match_parent"
+      android:layout_height="215dp"
+      android:layout_marginTop="8dp"
+      android:clipToPadding="false"
+      android:gravity="center"
+      android:orientation="horizontal"
+      app:layout_constraintTop_toBottomOf="@id/linearLayPerInfo"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintVertical_bias="1.0">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/Cardenq_Add"
+        android:layout_width="160dp"
+        android:layout_height="190dp"
+        android:layout_margin="10dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardElevation="0dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/Img_Add"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/cerclebackgroundgreen"
+            android:padding="10dp"
+            android:src="@drawable/ic_control_point_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/Enq_add"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="@color/lightgray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/Enq_add"
+            android:textColor="@android:color/darker_gray" />
+
+      </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/Cardenq_Search"
+        android:layout_width="160dp"
+        android:layout_height="190dp"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardElevation="0dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/Img_Search"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/cerclebackgroundpink"
+            android:padding="10dp"
+            android:src="@drawable/ic_search_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/SearchEq"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="@color/lightgray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/Search"
+            android:textColor="@android:color/darker_gray" />
+
+      </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+  </LinearLayout>
+
+
+  <LinearLayout
+      android:id="@+id/linearLayL2"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="1dp"
+      android:layout_marginBottom="50dp"
+      android:clipToPadding="false"
+      android:gravity="center"
+      android:orientation="horizontal"
+      app:layout_constraintTop_toBottomOf="@id/linearLayL1"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintBottom_toBottomOf="parent"
+      >
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/bank"
+        android:layout_width="160dp"
+        android:layout_height="190dp"
+        android:layout_margin="10dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardElevation="0dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/Img_Edit_Eq"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/cerclebackgroundyellow"
+            android:padding="10dp"
+            android:src="@drawable/ic_mode_edit_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/Edit_fp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="@color/lightgray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/Edit_fp"
+            android:textColor="@android:color/darker_gray" />
+
+      </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="160dp"
+        android:layout_height="190dp"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/transparent"
+        app:cardElevation="0dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/Img_Add_fp"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/cerclebackgroundgrey"
+            android:padding="10dp"
+            android:src="@drawable/ic_add_alert_black_24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/add_fp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="@color/lightgray" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/add_fp"
+            android:textColor="@android:color/darker_gray" />
+
+      </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+  </LinearLayout>
+
+
+
+</androidx.constraintlayout.ConstraintLayout>

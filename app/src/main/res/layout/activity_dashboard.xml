@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/back"
+    tools:context=".dashboard">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="2"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.15"
+        android:orientation="vertical"
+        android:weightSum="2"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.55"
+            >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+        <ImageView
+            android:layout_width="71dp"
+            android:layout_height="match_parent"
+            android:id="@+id/img_pro_Pic"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/linear_layout"
+
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_view_Name"
+            app:layout_constraintStart_toEndOf="@id/img_pro_Pic"
+            app:layout_constraintTop_toTopOf="@id/img_pro_Pic"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="2dp"
+            android:textSize="20sp"
+            android:textColor="#fff"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_view_branch"
+            app:layout_constraintStart_toEndOf="@id/img_pro_Pic"
+            app:layout_constraintTop_toBottomOf="@id/text_view_Name"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="4dp"
+            android:textSize="16sp"
+            android:textColor="#fff"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_view_Positon"
+            app:layout_constraintStart_toEndOf="@id/img_pro_Pic"
+            app:layout_constraintTop_toBottomOf="@id/text_view_branch"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="4dp"
+            android:textSize="13sp"
+            android:textColor="#fff"
+
+            />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/check_box_all"
+                android:text="All"
+                android:textSize="13sp"
+                android:layout_marginBottom="3.25dp"
+                android:layout_marginStart="3.25dp"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_view_Positon"
+                app:layout_constraintEnd_toStartOf="@id/text_view_from_date"
+                app:layout_constraintStart_toEndOf="@id/text_view_Positon"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_view_from_date"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/text_view_to_date"
+                app:layout_constraintStart_toEndOf="@id/check_box_all"
+                app:layout_constraintTop_toBottomOf="@id/text_view_Positon"
+                android:layout_marginBottom="7dp"
+                android:layout_marginStart="10dp"
+                android:gravity="end"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:text="@string/FromDate"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_view_to_date"
+                app:layout_constraintBottom_toBottomOf="parent "
+                app:layout_constraintEnd_toStartOf="@+id/imageView_Search"
+                app:layout_constraintStart_toEndOf="@id/text_view_from_date"
+                app:layout_constraintTop_toBottomOf="@id/text_view_Positon"
+                android:layout_marginBottom="7dp"
+                android:layout_marginStart="10dp"
+                android:gravity="end"
+                android:textSize="13sp"
+                android:textColor="@color/white"
+                android:text="@string/ToDate"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView_Search"
+                app:layout_constraintStart_toEndOf="@id/text_view_to_date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="2dp"
+                android:background="@drawable/ic_search_black_24dp"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:weightSum="3"
+        android:layout_weight="1.45">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/Line_lay_dashMain_Top"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:weightSum="3"
+            app:layout_constraintStart_toEndOf="@id/img_pro_Pic"
+            app:layout_constraintTop_toBottomOf="@id/img_pro_Pic"
+            android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/Line_lay_dashMain_Top_0"
+                    android:orientation="vertical"
+                    android:weightSum="10"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/img_view_Eq_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="9"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text_view_total_eq"
+                        android:text=" Total   Enquiries"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/Line_lay_dashMain_Top_1"
+                android:orientation="vertical"
+                    android:weightSum="10"
+                android:layout_weight="1">
+
+
+                    <ImageView
+                        android:id="@+id/img_view_book_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="9"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text_view_booking_count"
+                        android:text="Booking On This Month"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/Line_lay_dashMain_Top_2"
+                android:orientation="vertical"
+                android:weightSum="10"
+                android:layout_weight="1">
+                    <ImageView
+                        android:id="@+id/img_view_Invoice_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="9"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text_view_invoice_count"
+                        android:text="Invoiced On This Month"
+                        android:textStyle="bold"
+                        android:textSize="13sp"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        />
+
+                </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/Line_lay_dashMain_Bottom"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:weightSum="3"
+            app:layout_constraintStart_toEndOf="@id/img_pro_Pic"
+            app:layout_constraintTop_toBottomOf="@id/img_pro_Pic"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/Line_lay_dashMain_Bottom_0"
+                android:orientation="vertical"
+                android:weightSum="10"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/img_view_delivered_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="9"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_view_delivery_count"
+                    android:text="Delivery On This Month"
+                    android:textStyle="bold"
+                    android:textSize="12.5sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/Line_lay_dashMain_Bottom_1"
+                android:orientation="vertical"
+                android:weightSum="10"
+                android:layout_weight="1">
+
+
+                <ImageView
+                    android:id="@+id/img_view_pending_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="9"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_view_pending_count"
+                    android:text="Pending Followup"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    />
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/Line_lay_dashMain_Bottom_2"
+                android:orientation="vertical"
+                android:weightSum="10"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/img_view_TestDrive_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="9"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_view_test_drive_count"
+                    android:text="TestDrive On This Month"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/Line_lay_dashMain_Bottom2"
+            android:layout_marginEnd="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:weightSum="3"
+            app:layout_constraintStart_toEndOf="@id/img_pro_Pic"
+            app:layout_constraintTop_toBottomOf="@id/img_pro_Pic"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/Line_lay_dashMain_Bottom2_0"
+                android:orientation="vertical"
+                android:weightSum="10"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/img_view_delivered_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="9"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_view_delivery_count"
+                    android:text="Delivery On This Month"
+                    android:textStyle="bold"
+                    android:textSize="12.5sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/Line_lay_dashMain_Bottom2_1"
+                android:orientation="vertical"
+                android:weightSum="10"
+                android:layout_weight="1">
+
+
+                <ImageView
+                    android:id="@+id/img_view_pending_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="9"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_view_pending_count"
+                    android:text="Pending Followup"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    />
+
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/Line_lay_dashMain_Bottom2_2"
+                android:orientation="vertical"
+                android:weightSum="10"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/img_view_TestDrive_count"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="9"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_view_test_drive_count"
+                    android:text="TestDrive On This Month"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.75"
+            android:orientation="vertical"
+            android:weightSum="1"
+            >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/Line_lay_menu_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:orientation="vertical"
+                android:weightSum="4"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/Line_lay_menu_0"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:weightSum="1"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/menu_shape"
+                    >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:id="@+id/img_view_dash_0"
+                        android:layout_weight="1"
+                        >
+
+                    </ImageView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Line_lay_menu_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_marginTop="7.5dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/menu_shape"
+                    >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/img_view_dash_1"
+                        >
+
+                    </ImageView>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/Line_lay_menu_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_marginTop="7.5dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:orientation="vertical"
+                    android:background="@drawable/menu_shape"
+                    >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/img_view_dash_2"
+                        >
+
+                    </ImageView>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/Line_lay_menu_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_marginTop="7.5dp"
+                    android:orientation="vertical"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    android:background="@drawable/menu_shape"
+                    >
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/img_view_dash_3"
+                        >
+
+                    </ImageView>
+
+
+                </LinearLayout>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

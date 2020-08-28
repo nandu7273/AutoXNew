@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:layout_gravity="center"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:background="@color/transparent"
+    android:gravity="center">
+
+
+
+    <LinearLayout
+        android:id="@+id/frameLinear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:background="@color/signupColor"
+        android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/TxtInputLayEnqfromDate"
+            android:layout_width="0dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/TxtInputLayPin"
+            android:layout_marginStart="15dp"
+            android:layout_weight="1"
+            android:textColorHint="@color/white"
+            android:layout_gravity="start"
+            android:nextFocusForward="@+id/EdTxtPinCode"
+            android:nextFocusRight="@+id/EdTxtPinCode"
+            android:minHeight="5dp">
+
+            <EditText
+                android:id="@+id/txtfrmDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:layout_weight="1"
+                android:hint="@string/FromDate"
+                android:inputType="date"
+                android:textColor="@color/white"
+                tools:targetApi="o" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/TxtInputLayEnqToDate"
+            android:layout_width="0dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:textColorHint="@color/white"
+            android:minHeight="5dp">
+
+
+            <EditText
+                android:id="@+id/txtToDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:hint="@string/ToDate"
+                android:inputType="date"
+                android:layout_weight="1"
+                tools:targetApi="o" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/linearLayoutDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_centerHorizontal="true"
+        android:weightSum="2"
+        android:layout_below="@id/linearLayoutDate"
+        android:layout_marginEnd="15dp"
+        android:textColorHint="@color/white"
+        android:layout_marginStart="15dp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:layout_weight="1"
+            android:id="@+id/spnSearchBy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:textColorHint="@color/white">
+
+            <EditText
+                android:id="@+id/txtSearchFor"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:textColorHint="@color/white"
+                android:hint="@string/Search"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:importantForAutofill="no" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout1"
+        android:layout_marginStart="70dp"
+        android:layout_marginEnd="70dp"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="1dp"
+            android:visibility="visible"
+            android:enabled="false"
+            android:layout_weight="1"
+            android:text="ADD"
+            />
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="1dp"
+            android:text="@string/Search" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

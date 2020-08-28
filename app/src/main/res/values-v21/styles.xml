@@ -1,0 +1,43 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme" >
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.MyApp" parent="Theme.MaterialComponents.Light"/>
+
+
+
+    <style name="FullscreenTheme" parent="AppTheme">
+
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+
+        <item name="android:statusBarColor">@color/signupColor</item>
+        <item name="android:navigationBarColor">@color/signupColor</item>
+        <item name="android:colorEdgeEffect">@color/signupColor</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/signupColor</item>
+        <item name="colorPrimaryDark">@color/signupColor</item>
+        <item name="colorAccent">@color/yellow</item>
+
+        <item name="android:statusBarColor">@color/signupColor</item>
+        <item name="android:navigationBarColor">@color/signupColor</item>
+        <item name="android:colorEdgeEffect">@color/signupColor</item>
+
+    </style>
+
+    <style name="Widget.Tasker.TextView" parent="@android:style/Widget.Material.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.Tasker.Body</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
+
+</resources>

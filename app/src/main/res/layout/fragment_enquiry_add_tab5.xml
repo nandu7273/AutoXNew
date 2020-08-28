@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+   <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@mipmap/back">
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtviewcustD"
+        android:layout_width="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/TVExeFp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/white"/>
+
+
+                <TextView
+                    android:id="@+id/TVExeFp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="@string/ExeTask"
+                    android:layout_marginStart="40dp"
+                    android:layout_weight="1"
+                    app:layout_constraintTop_toBottomOf ="@+id/txtviewcustD"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/TXTILspnExe"
+                    />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/TXTILspnExe"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    app:boxStrokeColor="#FFFFFF"
+
+                    app:layout_constraintTop_toBottomOf ="@+id/TVExeFp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/txtinputLayoutExeAction"
+                    >
+
+                    <Spinner
+                        android:id="@+id/spnExeFollowup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </Spinner>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/txtinputLayoutExeAction"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:textColorHint="#FFFFFF"
+                    app:boxStrokeColor="#FFFFFF"
+
+                    app:layout_constraintTop_toBottomOf ="@+id/TXTILspnExe"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/TxtILEXeDate"
+
+
+                    >
+
+                    <EditText
+                        android:id="@+id/EditTxt_ExeActionPlan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/Exeaction"
+                        android:textColor="#FFFFFF"
+                        android:textColorHighlight="#FFFFFF"
+                        android:textColorLink="#FFFFFF"
+                        android:textCursorDrawable="@drawable/color_cursor"
+                        android:importantForAutofill="no" tools:targetApi="o"
+                        android:inputType="text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:id="@+id/TxtILEXeDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    app:layout_constraintTop_toBottomOf ="@+id/txtinputLayoutExeAction"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/TVnxtfp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/white"
+                    app:boxStrokeColor="#FFFFFF">
+
+                    <EditText
+                        android:id="@+id/EditTxt_ExeDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/ExeactionDate"
+                        android:inputType="date"
+                        android:importantForAutofill="no" tools:targetApi="o" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+                    <TextView
+                        android:id="@+id/TVnxtfp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:text="@string/nextfp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginStart="40dp"
+                        app:layout_constraintTop_toBottomOf ="@+id/TxtILEXeDate"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/spnNxtFollowup"
+
+
+                        />
+
+
+                        <Spinner
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
+                            app:layout_constraintTop_toBottomOf="@id/TVnxtfp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintBottom_toTopOf="@+id/TxtInputLayExeAp"
+                            android:id="@+id/spnNxtFollowup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                        </Spinner>
+
+
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+
+
+                        android:id="@+id/TxtInputLayExeAp"
+                        app:layout_constraintTop_toBottomOf="@id/spnNxtFollowup"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toTopOf="@+id/TxtLNxtplnDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:textColorHint="@color/white"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+
+                        app:boxStrokeColor="#FFFFFF">
+
+                        <EditText
+
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:id="@+id/EditTxt_NextActionPlan"
+                            android:hint="@string/nextaction"
+                            android:inputType="text" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/TxtLNxtplnDate"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+
+                        app:layout_constraintTop_toBottomOf="@id/TxtInputLayExeAp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+
+
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:textColorHint="@color/white"
+                        app:boxStrokeColor="#FFFFFF">
+
+                        <EditText
+                            android:id="@+id/EditTxt_NextActionPlanDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/nextactionDate"
+                            android:inputType="date"
+                            android:importantForAutofill="no"
+                            android:focusable="false"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+        <Button
+            android:id="@+id/BtnFp_Cancel"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:hint="@string/Cancel"
+           app:layout_constraintTop_toBottomOf="@+id/TxtLNxtplnDate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/BtnFp_Save"
+            app:layout_constraintStart_toStartOf="parent"
+
+            />
+
+
+        <Button
+            android:id="@+id/BtnFp_Save"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:hint="@string/Ok"
+            app:layout_constraintTop_toBottomOf="@+id/TxtLNxtplnDate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/BtnFp_Cancel"
+           />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

@@ -1,0 +1,80 @@
+<resources>
+    <string name="app_name">Grand Bajaj</string>
+    <string name="email">E-Mail</string>
+    <string name="Psw">Password</string>
+    <string name="SignUp">Sign Up</string>
+    <string name="SignIn">Sign In</string>
+    <string name="Ok">Ok</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Back">Back</string>
+    <string name="Remember">Remember Me</string>
+    <string name="fgpsw">Forgot Password</string>
+    <string name="psw">Password</string>
+    <string name="Mobile">   Mobile Number</string>
+    <string name="conf_login">Confirm Login !</string>
+    <string name="yes">Yes</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="no">No</string>
+
+    <string name="title_activity_splashscreen">SplashscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="powered_by">Powered By LogicX</string>
+    <string name="title_activity_enquiry_add">Enquiry_add</string>
+    <string name="tab_text_1">Customer Details</string>
+    <string name="Details">Details</string>
+    <string name="tab_text_2">Vehicle Details</string>
+    <string name="tab_text_3">Test Drive Details</string>
+    <string name="tab_text_4">Exchange Details</string>
+    <string name="tab_text_5">FollowUp</string>
+    <string name="Customer_info">Customer Details</string>
+    <string name="Full_name">Full Name</string>
+    <string name="MobileCode">+91</string>
+    <string name="Address">Address</string>
+    <string name="AddressLine1">Address Line 1</string>
+    <string name="AddressLine2">Address Line 2</string>
+    <string name="Pin">Pin Code</string>
+    <string name="Occup">Occupation</string>
+    <string name="ProsNo">Prospect ID</string>
+    <string name="Enq_Date">Enquiry Date</string>
+    <string name="title_activity_home_activity">User</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="menu_update">Update</string>
+    <string name="Enq_Count">Total Enquiries</string>
+    <string name="Bkng_Count">Total Bookings</string>
+    <string name="Enq_Calls">Total Enquiry Calls</string>
+    <string name="Search">Search</string>
+    <string name="SearchEq">Search Enquiry</string>
+    <string name="Editfp">Edit</string>
+    <string name="Edit_fp">Edit Enquiry</string>
+    <string name="add_fp">Pending Task</string>
+    <string name="Enq_add">Add Enquiry</string>
+    <string name="nextfp">Next FollowUp</string>
+    <string name="nextaction">Next Action Plan</string>
+    <string name="nextactionDate">Next Action Plan Date</string>
+    <string name="ExeTask">Executed Task</string>
+    <string name="Exeaction">Executed Action</string>
+    <string name="ExeactionDate">Executed Date</string>
+    <string name="FromDate">From Date</string>
+    <string name="ToDate">To Date</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_camera">Camera</string>
+    <string name="Help">Help</string>
+    <string name="todo">TODO</string>
+    <string name="notification_description">Downloading Update</string>
+    <string name="update_app_url">http://logicxnet.com/AUTOX_GRAND/ENQ/app_connector/download.php?file=appgrand.apk</string>
+
+
+</resources>
