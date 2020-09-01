@@ -75,6 +75,9 @@
     <string name="todo">TODO</string>
     <string name="notification_description">Downloading Update</string>
     <string name="update_app_url">http://logicxnet.com/AUTOX_GRAND/ENQ/app_connector/download.php?file=appgrand.apk</string>
-
+    <string name="enquiry">ENQUIRY</string>
+    <string name="retail">RETAIL</string>
+    <string name="followup">FOLLOWUP</string>
+    <string name="delivery">DELIVERY</string>
 
 </resources>

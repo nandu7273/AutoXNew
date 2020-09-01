@@ -119,6 +119,11 @@ public class dashboard extends AppCompatActivity {
         tv_testdrive=findViewById(R.id.text_view_test_drive_count);
 
 
+        Intent intent;
+        intent = new Intent(dashboard.this, new_dashboard.class);
+        startActivity(intent);
+
+
         if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.HONEYCOMB_MR1) {
             new dashboard.Get_Sc_info().execute();
         } else {
