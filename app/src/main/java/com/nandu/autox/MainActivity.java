@@ -1310,7 +1310,7 @@ public class MainActivity extends AppCompatActivity {
 //                    startActivity(intent_BkList);
 //                }
                 Intent intent;
-                intent = new Intent(MainActivity.this, dashboard.class);
+                intent = new Intent(MainActivity.this, new_dashboard.class);
 
                 startActivity(intent);
                 MainActivity.this.finish();

@@ -393,7 +393,7 @@ public class new_dashboard extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Please check your internet connection...", Toast.LENGTH_LONG).show();
             } else {
                 Toast.makeText(getApplicationContext(), "Sorry,failed to check details", Toast.LENGTH_LONG).show();
-                openDialog();
+                //openDialog();
             }
             pDialog.dismiss();
 
