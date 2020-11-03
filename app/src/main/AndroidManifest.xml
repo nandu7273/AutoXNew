@@ -3,27 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.nandu.autox">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.READ_PROFILE" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_CALL_LOG" />
-    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
-    <uses-permission android:name="android.permission.ADJUST_RUNTIME_PERMISSIONS_POLICY" />
-    <uses-permission android:name="android.permission.WHITELIST_RESTRICTED_PERMISSIONS" />
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    <uses-permission android:name="android.permission.MANAGE_ROLE_HOLDERS" />
-    <uses-permission android:name="android.permission.OBSERVE_ROLE_HOLDERS" />
-    <uses-permission android:name="android.permission.ACCESS_SHARED_LIBRARIES" />
-    <uses-permission android:name="com.nandu.autox.permission.MANAGE_ROLES_FROM_CONTROLLER" />
-    <uses-permission android:name="android.permission.REQUEST_INCIDENT_REPORT_APPROVAL" />
-    <uses-permission android:name="android.permission.APPROVE_INCIDENT_REPORTS" />
-    <uses-permission android:name="android.permission.READ_DEVICE_CONFIG" />
-    <uses-permission android:name="android.permission.OPEN_ACCESSIBILITY_DETAILS_SETTINGS" />
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
 
     <application
         android:name=".PublicShared"

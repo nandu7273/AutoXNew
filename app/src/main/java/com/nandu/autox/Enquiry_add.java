@@ -2249,7 +2249,7 @@ public class Enquiry_add extends AppCompatActivity {
 
             }catch (Exception e){
 
-                params.add(new BasicNameValuePair("Test_Drive_Date",now_date_yyyy_MM_dd()));
+               // params.add(new BasicNameValuePair("Test_Drive_Date",now_date_yyyy_MM_dd()));
             }
 
 
